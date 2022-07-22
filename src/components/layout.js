@@ -1,4 +1,4 @@
-import * as React from "React";
+import * as React from "react";
 import { Link } from "gatsby";
 const navLinkStyles = "h-full p-3 px-4 hover:underline underline-offset-4 decoration-2 decoration-emerald-500";
 
