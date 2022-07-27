@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 
 const Now = () => {
     return (
-      <Layout pageTitle="meow">
+      <Layout pageTitle="meow" selectedPage="now">
         Meow
       </Layout>
 

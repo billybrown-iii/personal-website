@@ -1,16 +1,13 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Project from "../components/project";
-import MainContentWrapper from "../components/main-content-wrapper";
 
 const Projects = () => {
   return (
-    <Layout pageTitle="meow">
-      <MainContentWrapper>
+    <Layout pageTitle="meow" selectedPage="projects">
         <div className="">
           <Project>project</Project>
         </div>
-      </MainContentWrapper>
     </Layout>
   );
 };

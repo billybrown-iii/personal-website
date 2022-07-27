@@ -1,58 +1,48 @@
 import * as React from "react";
 import Layout from "../components/layout";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { graphql } from "gatsby";
-import MainContentWrapper from "../components/main-content-wrapper";
 import MDXWrapper from "../components/mdxwrapper";
 // @ts-ignore
-import portrait from "../images/billy.jpg";
-import feather from "feather-icons";
+// import portrait from "../images/billy.jpg";
+import InfoCard from "../components/InfoCard";
 
-const userIcon = feather.icons["user"].toSvg({ height: 24 });
-const mapIcon = feather.icons["map-pin"].toSvg({ height: 24 });
-const codeIcon = feather.icons["code"].toSvg({ height: 24 });
+const linkStyles = `
+w-3/5 m-5 p-3
+border-2 border-gray-600 rounded-md
+bg-gray-600 text-gray-200
+hover:text-gray-50 hover:underline hover:decoration-emerald-500 hover:decoration-2
+`;
 
 const Index = ({ data }) => {
   console.log(data);
   return (
-    <Layout pageTitle="meow">
-      <MainContentWrapper>
-        <div className="flex flex-wrap">
-          <div className="w-4/5 md:w-3/5 md:pl-20 mb-20">
-            <MDXWrapper>
-              <MDXRenderer>{data.mdx.body}</MDXRenderer>
-            </MDXWrapper>
-          </div>
-          <div className="w-4/5 md:w-2/5">
-            <div className="m-auto bg-gray-600 px-8 py-4 rounded-xl">
-              <div className="text-2xl text-center mb-3">Billy Brown III</div>
-              <img className="w-4/5 m-auto rounded-xl" src={portrait} />
-              <div className="flex mr-1 my-5">
-                <span
-                  className="mr-1"
-                  dangerouslySetInnerHTML={{ __html: userIcon }}
-                />
-                Software Engineer
-              </div>
-              <div className="flex mr-1 my-5">
-                <span
-                  className="mr-1"
-                  dangerouslySetInnerHTML={{ __html: mapIcon }}
-                />
-                Vancouver, WA
-              </div>
-              <div className="flex mr-1 my-5">
-                <span
-                  className="mr-1"
-                  dangerouslySetInnerHTML={{ __html: codeIcon}}
-                />
-                JavaScript / React / Node.js
-              </div>
-            </div>
-            {/* <img className="rounded-3xl w-2/3 m-auto mt-4" src={portrait}></img> */}
-          </div>
+    <Layout pageTitle="Home" selectedPage="index">
+      <div className="flex flex-wrap flex-row-reverse bg-gray-700">
+        <div className="w-2/3 hidden md:w-1/3 md:block mx-auto my-8">
+        
+          <InfoCard />
         </div>
-      </MainContentWrapper>
+        
+
+        <div className="w-4/5 md:w-1/2 md:pl-20 mb-20">
+          <MDXWrapper>
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </MDXWrapper>
+          {/* <hr className="w-[18rem] my-3" /> */}
+          <ul>
+            <Link to="/projects">
+              <li className={linkStyles}>Projects</li>
+            </Link>
+            <Link to="/about">
+              <li className={linkStyles}>About me</li>
+            </Link>
+            <Link to="/now">
+              <li className={linkStyles}>What I'm up to now</li>
+            </Link>
+          </ul>
+        </div>
+      </div>
     </Layout>
   );
 };
