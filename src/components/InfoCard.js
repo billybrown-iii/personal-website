@@ -1,30 +1,41 @@
 import * as React from "react";
+import CodeItem from "./CodeItem";
 import feather from "feather-icons";
-// @ts-ignore
-import portrait from "../images/billy.jpg";
 
 const userIcon = feather.icons["user"].toSvg({ height: 24 });
 const mapIcon = feather.icons["map-pin"].toSvg({ height: 24 });
 const codeIcon = feather.icons["code"].toSvg({ height: 24 });
-const linkedInIcon = feather.icons["linkedin"].toSvg({ height: 16 });
 
 const InfoCard = () => {
   return (
-    <div className="bg-gray-600 px-8 py-4 rounded-lg">
-      <div className="text-xl text-center mb-6">Billy Brown III</div>
-      {/* <span dangerouslySetInnerHTML={{__html: linkedInIcon}}></span> */}
-      {/* <img className="w-4/5 m-auto my-6 rounded-xl" src={portrait} /> */}
-      <div className="flex mr-1 my-5">
-        <span className="mr-1" dangerouslySetInnerHTML={{ __html: userIcon }} />
+    <div className="bg-gray-600 px-4 py-4 rounded-lg">
+      <div className="w-fit m-auto text-xl p-1 mb-6 border-b border-slate-400">
+        Billy Brown III
+      </div>
+      <div className="mr-1 my-5 text-center">
+        <div
+          className="w-fit m-auto"
+          dangerouslySetInnerHTML={{ __html: userIcon }}
+        />
         Software Engineer
       </div>
-      <div className="flex mr-1 my-5">
-        <span className="mr-1" dangerouslySetInnerHTML={{ __html: mapIcon }} />
+      <div className="mr-1 my-5 text-center">
+        <div
+          className="w-fit m-auto"
+          dangerouslySetInnerHTML={{ __html: mapIcon }}
+        />
         Vancouver, WA
+        <div className="text-xs">(PDX metro area)</div>
       </div>
-      <div className="flex mr-1 my-5">
-        <span className="mr-1" dangerouslySetInnerHTML={{ __html: codeIcon }} />
-        JavaScript / React / Node
+      <div className="mr-1 my-5 text-center">
+        <div
+          className="w-fit m-auto border-b"
+          dangerouslySetInnerHTML={{ __html: codeIcon }}
+        />
+        <CodeItem name="JavaScript" />
+        <CodeItem name="TypeScript" />
+        <CodeItem name="React" />
+        <CodeItem name="Node" />
       </div>
     </div>
   );

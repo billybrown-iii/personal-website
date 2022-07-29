@@ -1,43 +1,53 @@
-import * as React from "react"
-import Layout from "../components/layout"
+import * as React from "react";
+import Layout from "../components/Layout";
 import LinksCard from "../components/LinksCard";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import MDXWrapper from "../components/mdxwrapper";
-import { graphql, Link } from "gatsby";
-import feather from "feather-icons";
-
-// @ts-ignore
-// import portrait from "../images/billy.jpg";
-{/* <img className="w-4/5 m-auto my-6 rounded-xl" src={portrait} /> */}
-
-
-
+import MDXWrapper from "../components/MDXWrapper";
+import { graphql } from "gatsby";
 
 const About = ({ data }) => {
-    return (
-      <Layout pageTitle="meow" selectedPage="about">
-        <div className="flex flex-row-reverse flex-wrap">
-          <div className="w-1/4"><LinksCard /></div>
-          <div className="w-3/4">
-            <div id="about-header" className="">
-              <MDXWrapper>
-                <MDXRenderer>{data.mdx.body}</MDXRenderer>
-              </MDXWrapper>
-            </div>
+  return (
+    <Layout pageTitle="About" selectedPage="about">
+      <div className="flex flex-row-reverse flex-wrap">
+        <div className="w-1/2 md:w-1/4 mx-auto mb-10">
+          <LinksCard />
+        </div>
+        <div className="w-3/4 mx-auto">
+          <div id="about-header" className="mr-3 mb-10">
+            <MDXWrapper>
+              <MDXRenderer>
+                {
+                  data.allMdx.nodes.find((node) => node.slug === "about-header")
+                    .body
+                }
+              </MDXRenderer>
+            </MDXWrapper>
+          </div>
+          <div id="about-body">
+            <MDXWrapper>
+              <MDXRenderer>
+                {
+                  data.allMdx.nodes.find((node) => node.slug === "about-body")
+                    .body
+                }
+              </MDXRenderer>
+            </MDXWrapper>
           </div>
         </div>
-        
-      </Layout>
-
-    )
-}
+      </div>
+    </Layout>
+  );
+};
 
 export const query = graphql`
-query MyQuery2 {
-  mdx(slug: {eq: "about-header"}) {
-    body
+  query MyQuery2 {
+    allMdx(filter: { slug: { glob: "about*" } }) {
+      nodes {
+        slug
+        body
+      }
+    }
   }
-}
-`
+`;
 
-export default About
+export default About;

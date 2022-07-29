@@ -3,8 +3,6 @@ import Layout from "../components/layout";
 import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import MDXWrapper from "../components/mdxwrapper";
-// @ts-ignore
-// import portrait from "../images/billy.jpg";
 import InfoCard from "../components/InfoCard";
 
 const linkStyles = `
@@ -19,17 +17,14 @@ const Index = ({ data }) => {
   return (
     <Layout pageTitle="Home" selectedPage="index">
       <div className="flex flex-wrap flex-row-reverse bg-gray-700">
-        <div className="w-2/3 hidden md:w-1/3 md:block mx-auto my-8">
-        
+        <div className="w-2/3 hidden md:w-1/3 md:block mx-auto">
           <InfoCard />
         </div>
-        
 
         <div className="w-4/5 md:w-1/2 md:pl-20 mb-20">
           <MDXWrapper>
             <MDXRenderer>{data.mdx.body}</MDXRenderer>
           </MDXWrapper>
-          {/* <hr className="w-[18rem] my-3" /> */}
           <ul>
             <Link to="/projects">
               <li className={linkStyles}>Projects</li>
