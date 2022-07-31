@@ -5,9 +5,9 @@ import Project from "../components/project";
 const Projects = () => {
   return (
     <Layout pageTitle="meow" selectedPage="projects">
-        <div className="">
-          <Project>project</Project>
-        </div>
+      <div className="">
+        <Project name="bonsai">markdown goes here</Project>
+      </div>
     </Layout>
   );
 };

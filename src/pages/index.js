@@ -6,7 +6,7 @@ import MDXWrapper from "../components/mdxwrapper";
 import InfoCard from "../components/InfoCard";
 
 const linkStyles = `
-w-3/5 m-5 p-3
+w-3/5 m-5 p-3 pr-2
 border-2 border-gray-600 rounded-md
 bg-gray-600 text-gray-200
 hover:text-gray-50 hover:underline hover:decoration-emerald-500 hover:decoration-2
