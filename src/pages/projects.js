@@ -3,29 +3,38 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Project from "../components/Project";
-import MiniCodeList from "../components/MiniCodeList";
+import ProjectCodeList from "../components/ProjectCodeList";
 import ProjectImage from "../components/ProjectImage";
+import ExternalLink from "../components/ExternalLink";
 
 // image size: 1060 x 840
-// import bonsaiImg from "../images/bonasi.png";
 
 const Projects = () => {
   return (
     <Layout pageTitle="meow" selectedPage="projects">
       <div className="">
         <Project title="Bonsai Notes">
-          <MiniCodeList
-            techArr={["JavaScript", "TypeScript", "React", "Node"]}
-          />
           <ProjectImage>
             <StaticImage
               src={"../images/bonsai.png"}
               alt="Image of project"
               className="rounded"
-              width={400}
+              width={1200}
+              height={600}
             />
           </ProjectImage>
-          markdown goes here
+          <ProjectCodeList
+            techArr={["JavaScript", "TypeScript", "React", "Node"]}
+          >
+            <ExternalLink
+              name="View Code"
+              iconName="github"
+              url="https://github.com/billybrown-iii/bonsai-notes"
+            />
+          </ProjectCodeList>
+          <div className="w-full my-6 mx-4">
+            <hr />
+          </div>
         </Project>
       </div>
     </Layout>

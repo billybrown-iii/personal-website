@@ -30,7 +30,7 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
           </div>
         </div>
       </div>
-      {isExpanded ? <div className="ml-24">{children}</div> : null}
+      {isExpanded ? <div className="ml-12">{children}</div> : null}
     </>
   );
 };
