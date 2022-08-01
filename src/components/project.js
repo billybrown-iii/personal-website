@@ -1,28 +1,31 @@
 import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import ExpandCollapse from "./ExpandCollapse";
+import MiniCodeItem from "./MiniCodeItem";
+import ExternalLink from "./ExternalLink";
 
-/** Single project component.  Takes name as a prop, and takes text description as children */
-const Project = ({ name, children }) => {
-  //   let codeItems;
-  //   let img;
-  let title;
+/** Single project component.
+ * Takes in the following children:
+ * Tech list
+ * Image
+ * Description (markdown)
+ */
+const Project = ({ title, children }) => {
+  // const linkItems = linkArr.map((item, index) => (
+  //   <span className="h-fit" key={index}>
+  //     <ExternalLink name={item.name} iconName={item.iconType} url={item.url} />
+  //   </span>
+  // ));
 
-  switch (name) {
-    case "bonsai":
-      title = "Bonsai Notes";
-      break;
-    default:
-      throw new Error("Project.js error: name not found.");
-  }
+  // let imgRef;
+  // if (img === "bonsai") imgRef = "../images/bonsai.png";
+  // console.log(codeItems);
 
   return (
-    <ExpandCollapse name={title} size="large" defaultState={true}>
-      <div className="flex">
-        {/* code items go here */}
-        {/* optional image goes here */}
-        {/* external links go here */}
+    <ExpandCollapse title={title} defaultState={true}>
+      <div className="flex flex-wrap flex-row-reverse justify-end">
+        {children}
       </div>
-      {children}
     </ExpandCollapse>
   );
 };

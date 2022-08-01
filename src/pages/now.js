@@ -1,13 +1,12 @@
-import * as React from "react"
-import Layout from "../components/layout"
+import * as React from "react";
+import Layout from "../components/Layout";
 
 const Now = () => {
-    return (
-      <Layout pageTitle="meow" selectedPage="now">
-        Meow
-      </Layout>
+  return (
+    <Layout pageTitle="meow" selectedPage="now">
+      Meow
+    </Layout>
+  );
+};
 
-    )
-}
-
-export default Now
+export default Now;

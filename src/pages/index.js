@@ -1,8 +1,8 @@
 import * as React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import MDXWrapper from "../components/mdxwrapper";
+import MDXWrapper from "../components/MDXWrapper";
 import InfoCard from "../components/InfoCard";
 
 const linkStyles = `

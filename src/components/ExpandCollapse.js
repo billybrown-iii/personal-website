@@ -7,15 +7,12 @@ const arrowIcon = feather.icons["triangle"].toSvg({
   "stroke-width": 3,
 });
 
-const ExpandCollapse = ({ name, size, defaultState, children }) => {
+const ExpandCollapse = ({ title, defaultState, children }) => {
   const [isExpanded, setIsExpanded] = useState(defaultState);
 
-  const largeIconClasses =
-    "p-3 mx-6 rounded-full group-hover:bg-gray-600 " +
+  const iconClasses =
+    "h-fit p-3 mx-6 rounded-full group-hover:bg-gray-600 " +
     (isExpanded ? "rotate-180" : "rotate-90");
-
-  const largeTitleClasses = "text-2xl underline";
-  const smallTitleClasses = "";
 
   return (
     <>
@@ -24,21 +21,16 @@ const ExpandCollapse = ({ name, size, defaultState, children }) => {
         onClick={() => setIsExpanded((prev) => !prev)}
       >
         <div
-          className={"h-fit " + largeIconClasses}
+          className={iconClasses}
           dangerouslySetInnerHTML={{ __html: arrowIcon }}
         />
         <div>
-          <div
-            className={
-              "select-none mb-6 pt-1.5 " +
-              (size === "large" ? largeTitleClasses : smallTitleClasses)
-            }
-          >
-            {name}
+          <div className="select-none mb-4 pt-1.5 text-2xl underline">
+            {title}
           </div>
-          {isExpanded ? <div>{children}</div> : null}
         </div>
       </div>
+      {isExpanded ? <div className="ml-24">{children}</div> : null}
     </>
   );
 };

@@ -5,6 +5,7 @@ import jsLogo from "../images/JS.svg";
 import reactLogo from "../images/React.svg";
 import nodeLogo from "../images/Node.svg";
 
+// Have two sizes?
 const CodeItem = ({ name }) => {
   let color;
   let img;
