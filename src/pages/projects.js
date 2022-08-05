@@ -2,43 +2,54 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
-import Project from "../components/Project";
 import ProjectCodeList from "../components/ProjectCodeList";
-import ProjectImage from "../components/ProjectImage";
 import ExternalLink from "../components/ExternalLink";
+import ExpandCollapse from "../components/ExpandCollapse";
+import MDXWrapper from "../components/MDXWrapper";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { graphql } from "gatsby";
 
-// image size: 1060 x 840
+{
+  /* <StaticImage
+            src={"../images/bonsai.png"}
+            alt="Image of project"
+            layout="constrained"
+            className="w-4/5 md:w-1/3 md:ml-0 mb-3 md:-mt-12 border-gray-900 rounded"
+          /> */
+}
 
-const Projects = () => {
+const Projects = ({ data }) => {
   return (
     <Layout pageTitle="meow" selectedPage="projects">
-      <div className="">
-        <Project title="Bonsai Notes">
-          <ProjectImage>
-            <StaticImage
-              src={"../images/bonsai.png"}
-              alt="Image of project"
-              className="rounded"
-              width={1200}
-              height={600}
-            />
-          </ProjectImage>
-          <ProjectCodeList
-            techArr={["JavaScript", "TypeScript", "React", "Node"]}
-          >
-            <ExternalLink
-              name="View Code"
-              iconName="github"
-              url="https://github.com/billybrown-iii/bonsai-notes"
-            />
-          </ProjectCodeList>
-          <div className="w-full my-6 mx-4">
-            <hr />
-          </div>
-        </Project>
-      </div>
+      <ExpandCollapse title="Bonsai Notes" defaultState={true}>
+        <ProjectCodeList
+          techArr={["TypeScript", "React", "Node", "Tailwind"]}
+        />
+        <ExternalLink
+          name="View Code"
+          iconName="github"
+          url="https://github.com/billybrown-iii/bonsai-notes"
+        />
+        <hr className="w-9/12 my-6 mx-4" />
+        <MDXWrapper>
+          <MDXRenderer>
+            {data.allMdx.nodes.find((item) => item.slug === "prj-bonsai").body}
+          </MDXRenderer>
+        </MDXWrapper>
+      </ExpandCollapse>
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    allMdx(filter: { slug: { glob: "prj*" } }) {
+      nodes {
+        slug
+        body
+      }
+    }
+  }
+`;
 
 export default Projects;

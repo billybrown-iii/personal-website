@@ -12,7 +12,7 @@ const About = ({ data }) => {
         <div className="w-1/2 md:w-1/4 mx-auto mb-10">
           <LinksCard />
         </div>
-        <div className="w-3/4 mx-auto">
+        <div className="w-full md:w-3/4 mx-auto">
           <div id="about-header" className="mr-3 mb-10">
             <MDXWrapper>
               <MDXRenderer>
