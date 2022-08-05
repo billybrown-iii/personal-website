@@ -18,7 +18,7 @@ const Layout = ({ pageTitle, children, selectedPage }) => {
     <>
       <title>{pageTitle}</title>
       <div className="">
-        <nav className="fixed w-full top-0 bg-gray-800 px-1 md:px-3 text-lg">
+        <nav className="fixed z-10 w-full top-0 bg-gray-800 px-1 md:px-3 text-lg">
           <ul className="flex gap-1">
             <Link to="/">
               <li className={indexStyles}>Billy B.</li>
@@ -34,7 +34,7 @@ const Layout = ({ pageTitle, children, selectedPage }) => {
             </Link>
           </ul>
         </nav>
-        <div className="w-4/5 sm:w-2/3 max-w-screen-md m-auto my-28">
+        <div className="w-4/5 sm:w-2/3 max-w-screen-md m-auto mt-24 mb-28">
           {children}
         </div>
       </div>

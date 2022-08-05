@@ -14,9 +14,9 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
     "h-fit p-1.5 mx-3 " + (isExpanded ? "rotate-180" : "rotate-90");
 
   return (
-    <>
+    <div className="mb-10">
       <div
-        className="flex group w-fit pr-3 border-b border-gray-700 hover:border-emerald-500 text-gray-200 hover:text-white"
+        className="flex group w-fit pr-3 border-b-2 border-gray-700 hover:border-slate-200 text-gray-200 hover:text-white"
         onClick={() => setIsExpanded((prev) => !prev)}
       >
         <div
@@ -27,8 +27,8 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
           <div className="select-none text-2xl">{title}</div>
         </div>
       </div>
-      {isExpanded ? <div className="ml-12">{children}</div> : null}
-    </>
+      {isExpanded ? <div className="ml-4 mt-2">{children}</div> : null}
+    </div>
   );
 };
 

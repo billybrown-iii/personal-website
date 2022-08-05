@@ -20,6 +20,12 @@ const MiniCodeItem = ({ name }) => {
     case "Tailwind":
       color = "border-teal-400";
       break;
+    case "Mathematics":
+      color = "border-cyan-400";
+      break;
+    case "MaterialUI":
+      color = "border-blue-400";
+      break;
     default:
       throw new Error("CodeItem error: name not found.");
   }

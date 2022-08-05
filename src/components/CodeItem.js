@@ -39,7 +39,7 @@ const CodeItem = ({ name }) => {
       }
     >
       <div>
-        <img className="w-5 py-1" src={img} alt="Coding language icon" />
+        <img className="w-4 md:w-5 py-1" src={img} alt="Coding language icon" />
       </div>
       <div className={"ml-2 pl-2 my-1 border-l border-slate-400"}>{name}</div>
     </div>
