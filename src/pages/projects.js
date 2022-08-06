@@ -9,15 +9,6 @@ import MDXWrapper from "../components/MDXWrapper";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { graphql } from "gatsby";
 
-{
-  /* <StaticImage
-            src={"../images/bonsai.png"}
-            alt="Image of project"
-            layout="constrained"
-            className="w-4/5 md:w-1/3 md:ml-0 mb-3 md:-mt-12 border-gray-900 rounded"
-          /> */
-}
-
 const Projects = ({ data }) => {
   return (
     <Layout pageTitle="meow" selectedPage="projects">
@@ -100,3 +91,7 @@ export const query = graphql`
 `;
 
 export default Projects;
+
+export function Head() {
+  return <title>Projects</title>;
+}

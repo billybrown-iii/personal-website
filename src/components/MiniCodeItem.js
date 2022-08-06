@@ -2,7 +2,6 @@ import * as React from "react";
 
 const MiniCodeItem = ({ name }) => {
   let color;
-  let img;
 
   switch (name) {
     case "JavaScript":

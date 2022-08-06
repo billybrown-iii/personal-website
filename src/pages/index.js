@@ -51,3 +51,7 @@ export const query = graphql`
 `;
 
 export default Index;
+
+export function Head() {
+  return <title>Index</title>;
+}

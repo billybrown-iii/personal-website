@@ -51,3 +51,6 @@ export const query = graphql`
 `;
 
 export default About;
+export function Head() {
+  return <title>About</title>;
+}
