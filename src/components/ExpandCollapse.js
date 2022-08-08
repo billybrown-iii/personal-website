@@ -27,7 +27,9 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
           <div className="select-none text-2xl">{title}</div>
         </div>
       </div>
-      {isExpanded ? <div className="ml-4 mt-2">{children}</div> : null}
+      <div className={"ml-4 mt-2 " + (isExpanded ? "visible" : "hidden")}>
+        {children}
+      </div>
     </div>
   );
 };

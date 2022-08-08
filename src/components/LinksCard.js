@@ -21,7 +21,7 @@ const LinksCard = () => {
         />
         <ExternalLink
           name="Email"
-          iconName="email"
+          iconName="mail"
           url="mailto: link8495@gmail.com"
         />
         <ExternalLink
@@ -29,7 +29,11 @@ const LinksCard = () => {
           iconName="linkedin"
           url="https://www.linkedin.com/in/billybrown-iii/"
         />
-        <ExternalLink name="Resume" iconName="page" url={data.file.publicURL} />
+        <ExternalLink
+          name="Resume"
+          iconName="file-text"
+          url={data.file.publicURL}
+        />
       </ul>
     </div>
   );

@@ -22,12 +22,13 @@ const Layout = ({ pageTitle, children, selectedPage }) => {
             <Link to="/">
               <li className={indexStyles}>Billy B.</li>
             </Link>
-            <Link to="/about">
-              <li className={aboutStyles}>About</li>
-            </Link>
             <Link to="/projects">
               <li className={projectStyles}>Projects</li>
             </Link>
+            <Link to="/about">
+              <li className={aboutStyles}>About</li>
+            </Link>
+
             <Link to="/now">
               <li className={nowStyles}>Now</li>
             </Link>

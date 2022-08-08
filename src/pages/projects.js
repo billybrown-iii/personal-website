@@ -20,7 +20,7 @@ const Projects = ({ data }) => {
           className="w-4/5 my-1 max-w-md rounded"
         />
         <ProjectCodeList
-          techArr={["TypeScript", "React", "Node", "Tailwind"]}
+          techArr={["JavaScript", "TypeScript", "React", "Node", "Tailwind"]}
         />
         <ExternalLink
           name="View Code"
@@ -61,11 +61,11 @@ const Projects = ({ data }) => {
         <ExternalLink
           name="View Code"
           iconName="github"
-          url="https://github.com/billybrown-iii/bonsai-notes"
+          url="https://github.com/billybrown-iii/budget-react-app"
         />
         <ExternalLink
           name="View Demo"
-          iconName="github"
+          iconName="link"
           url="https://monthlybudget.netlify.app"
         />
         <hr className="w-9/12 my-4 mx-4" />

@@ -17,7 +17,7 @@ const Index = ({ data }) => {
   return (
     <Layout pageTitle="Home" selectedPage="index">
       <div className="flex flex-wrap flex-row-reverse bg-gray-700">
-        <div className="w-2/3 md:w-1/3 mx-auto border-b-2 md:border-none border-gray-400 pb-3 mb-5">
+        <div className="w-2/3 md:w-1/3 mx-auto border-b-2 md:border-none border-gray-600 pb-2 mb-4">
           <InfoCard />
         </div>
 
