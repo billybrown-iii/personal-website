@@ -15,7 +15,7 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
 
   return (
     <div className="mb-10">
-      <div
+      <button
         className="flex group w-fit pr-3 border-b-2 border-gray-700 hover:border-slate-200 text-gray-200 hover:text-white"
         onClick={() => setIsExpanded((prev) => !prev)}
       >
@@ -26,7 +26,7 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
         <div>
           <div className="select-none text-2xl">{title}</div>
         </div>
-      </div>
+      </button>
       <div className={"ml-4 mt-2 " + (isExpanded ? "visible" : "hidden")}>
         {children}
       </div>
