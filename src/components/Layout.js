@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 const navLinkStyles =
-  "h-full p-3 px-5 hover:underline underline-offset-4 decoration-2 decoration-emerald-500";
+  "h-full p-3 px-3.5 md:px-5 hover:underline underline-offset-4 decoration-2 decoration-emerald-500";
 
 const Layout = ({ pageTitle, children, selectedPage }) => {
   let indexStyles = navLinkStyles;
