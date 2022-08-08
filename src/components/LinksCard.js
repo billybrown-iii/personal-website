@@ -20,9 +20,9 @@ const LinksCard = () => {
           url="https://github.com/billybrown-iii"
         />
         <ExternalLink
-          name="Email"
-          iconName="mail"
-          url="mailto: link8495@gmail.com"
+          name="Resume"
+          iconName="file-text"
+          url={data.file.publicURL}
         />
         <ExternalLink
           name="LinkedIn"
@@ -30,9 +30,9 @@ const LinksCard = () => {
           url="https://www.linkedin.com/in/billybrown-iii/"
         />
         <ExternalLink
-          name="Resume"
-          iconName="file-text"
-          url={data.file.publicURL}
+          name="Email"
+          iconName="mail"
+          url="mailto: link8495@gmail.com"
         />
       </ul>
     </div>
