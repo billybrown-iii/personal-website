@@ -15,13 +15,13 @@ hover:text-gray-50 hover:underline hover:decoration-emerald-500 hover:decoration
 const Index = ({ data }) => {
   console.log(data);
   return (
-    <Layout pageTitle="Home" selectedPage="index">
+    <Layout selectedPage="index">
       <div className="flex flex-wrap flex-row-reverse bg-gray-700">
         <div className="w-2/3 md:w-1/3 mx-auto border-b-2 md:border-none border-gray-600 pb-2 mb-4">
           <InfoCard />
         </div>
 
-        <div className="w-5/6 md:w-2/3 md:pl-20 mb-20">
+        <div className="w-5/6 md:w-1/2 md:pl-16 mb-20">
           <MDXWrapper>
             <MDXRenderer>{data.mdx.body}</MDXRenderer>
           </MDXWrapper>

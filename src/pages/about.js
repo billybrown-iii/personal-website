@@ -7,7 +7,7 @@ import { graphql } from "gatsby";
 
 const About = ({ data }) => {
   return (
-    <Layout pageTitle="About" selectedPage="about">
+    <Layout selectedPage="about">
       <div className="flex flex-row-reverse flex-wrap">
         <div className="w-1/2 md:w-1/4 mx-auto mb-10">
           <LinksCard />

@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 
 const Now = ({ data }) => {
   return (
-    <Layout pageTitle="meow" selectedPage="now">
+    <Layout selectedPage="now">
       <MDXWrapper>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </MDXWrapper>
