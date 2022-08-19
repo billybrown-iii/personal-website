@@ -16,7 +16,7 @@ const ExpandCollapse = ({ title, defaultState, children }) => {
   return (
     <div className="mb-10">
       <button
-        className="flex group w-fit pr-3 border-b-2 border-gray-700 hover:border-slate-200 text-gray-200 hover:text-white"
+        className="flex group w-fit pr-3 border-b-2 border-gray-700 hover:border-slate-200 text-left text-gray-200 hover:text-white"
         onClick={() => setIsExpanded((prev) => !prev)}
       >
         <div
