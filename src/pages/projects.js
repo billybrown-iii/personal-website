@@ -1,13 +1,13 @@
 // @ts-nocheck
-import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import Layout from "../components/Layout";
-import ProjectCodeList from "../components/ProjectCodeList";
-import ExternalLink from "../components/ExternalLink";
-import ExpandCollapse from "../components/ExpandCollapse";
-import MDXWrapper from "../components/MDXWrapper";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { graphql } from "gatsby";
+import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
+import Layout from "../components/Layout"
+import ProjectCodeList from "../components/ProjectCodeList"
+import ExternalLink from "../components/ExternalLink"
+import ExpandCollapse from "../components/ExpandCollapse"
+import MDXWrapper from "../components/MDXWrapper"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { graphql } from "gatsby"
 
 const Projects = ({ data }) => {
   return (
@@ -19,9 +19,8 @@ const Projects = ({ data }) => {
           layout="constrained"
           className="w-4/5 my-1 max-w-md rounded"
         />
-        <ProjectCodeList
-          techArr={["JavaScript", "TypeScript", "React", "Node", "Tailwind"]}
-        />
+        <ProjectCodeList techArr={["JavaScript", "TypeScript", "React", "Node", "Tailwind"]} />
+        <ExternalLink name="View Demo" iconName="link" url="https://bonsainotes.com" />
         <ExternalLink
           name="View Code"
           iconName="github"
@@ -63,11 +62,7 @@ const Projects = ({ data }) => {
           iconName="github"
           url="https://github.com/billybrown-iii/budget-react-app"
         />
-        <ExternalLink
-          name="View Demo"
-          iconName="link"
-          url="https://monthlybudget.netlify.app"
-        />
+        <ExternalLink name="View Demo" iconName="link" url="https://monthlybudget.netlify.app" />
         <hr className="w-9/12 my-4 mx-4" />
         <MDXWrapper>
           <MDXRenderer>
@@ -76,8 +71,8 @@ const Projects = ({ data }) => {
         </MDXWrapper>
       </ExpandCollapse>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query {
@@ -88,10 +83,10 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Projects;
+export default Projects
 
 export function Head() {
-  return <title>Projects</title>;
+  return <title>Projects</title>
 }
