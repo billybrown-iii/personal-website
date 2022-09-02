@@ -20,12 +20,12 @@ const Projects = ({ data }) => {
           className="w-4/5 my-1 max-w-md rounded"
         />
         <ProjectCodeList techArr={["JavaScript", "TypeScript", "React", "Node", "Tailwind"]} />
-        <ExternalLink name="View Demo" iconName="link" url="https://bonsainotes.com" />
         <ExternalLink
           name="View Code"
           iconName="github"
           url="https://github.com/billybrown-iii/bonsai-notes"
         />
+        <ExternalLink name="View Demo" iconName="link" url="https://bonsainotes.com" />
         <hr className="w-9/12 my-4 mx-4" />
         <MDXWrapper>
           <MDXRenderer>
