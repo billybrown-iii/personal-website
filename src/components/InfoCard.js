@@ -1,10 +1,10 @@
-import * as React from "react";
-import CodeItem from "./CodeItem";
-import feather from "feather-icons";
+import * as React from "react"
+import CodeItem from "./CodeItem"
+import feather from "feather-icons"
 
-const userIcon = feather.icons["user"].toSvg({ height: 24 });
-const mapIcon = feather.icons["map-pin"].toSvg({ height: 24 });
-const codeIcon = feather.icons["code"].toSvg({ height: 24 });
+const userIcon = feather.icons["user"].toSvg({ height: 24 })
+const mapIcon = feather.icons["map-pin"].toSvg({ height: 24 })
+const codeIcon = feather.icons["code"].toSvg({ height: 24 })
 
 const InfoCard = () => {
   return (
@@ -13,32 +13,23 @@ const InfoCard = () => {
         Billy Brown III
       </div>
       <div className="mr-1 my-3 md:my-5 text-center">
-        <div
-          className="w-fit m-auto"
-          dangerouslySetInnerHTML={{ __html: userIcon }}
-        />
-        Software Engineer
+        <div className="w-fit m-auto" dangerouslySetInnerHTML={{ __html: userIcon }} />
+        Full Stack Developer
       </div>
       <div className="mr-1 my-3 md:my-5 text-center">
-        <div
-          className="w-fit m-auto"
-          dangerouslySetInnerHTML={{ __html: mapIcon }}
-        />
+        <div className="w-fit m-auto" dangerouslySetInnerHTML={{ __html: mapIcon }} />
         Vancouver, WA
         <div className="text-xs md:text-sm">(PDX metro area)</div>
       </div>
       <div className="mr-1 my-3 md:my-5 text-center">
-        <div
-          className="w-fit m-auto border-b"
-          dangerouslySetInnerHTML={{ __html: codeIcon }}
-        />
+        <div className="w-fit m-auto border-b" dangerouslySetInnerHTML={{ __html: codeIcon }} />
         <CodeItem name="JavaScript" />
         <CodeItem name="TypeScript" />
         <CodeItem name="React" />
         <CodeItem name="Node" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default InfoCard;
+export default InfoCard
