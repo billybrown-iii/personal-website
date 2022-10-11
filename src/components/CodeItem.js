@@ -1,9 +1,10 @@
 // @ts-nocheck
 import * as React from "react";
-import tsLogo from "../images/TS.svg";
+// import tsLogo from "../images/TS.svg";
 import jsLogo from "../images/JS.svg";
 import reactLogo from "../images/React.svg";
 import nodeLogo from "../images/Node.svg";
+import cSharpLogo from "../images/csharp.svg";
 
 // Have two sizes?
 const CodeItem = ({ name }) => {
@@ -15,10 +16,10 @@ const CodeItem = ({ name }) => {
       color = "border-yellow-400";
       img = jsLogo;
       break;
-    case "TypeScript":
-      color = "border-blue-400";
-      img = tsLogo;
-      break;
+    // case "TypeScript":
+    //   color = "border-blue-400";
+    //   img = tsLogo;
+    //   break;
     case "React":
       color = "border-cyan-400";
       img = reactLogo;
@@ -27,6 +28,10 @@ const CodeItem = ({ name }) => {
       color = "border-green-400";
       img = nodeLogo;
       break;
+    case "C#":
+      color = "border-violet-400";
+      img = cSharpLogo;
+      break;
     default:
       throw new Error("CodeItem error: name not found.");
   }
@@ -34,10 +39,8 @@ const CodeItem = ({ name }) => {
   return (
     <div
       className={
-        "flex items-center w-full max-w-[10rem] mx-auto my-2 px-2 border rounded-lg " +
-        color
-      }
-    >
+        "flex items-center w-full max-w-[10rem] mx-auto my-2 px-2 border rounded-lg " + color
+      }>
       <div>
         <img className="w-4 md:w-5 py-1" src={img} alt="Coding language icon" />
       </div>

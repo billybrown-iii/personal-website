@@ -24,9 +24,9 @@ const InfoCard = () => {
       <div className="mr-1 my-3 md:my-5 text-center">
         <div className="w-fit m-auto border-b" dangerouslySetInnerHTML={{ __html: codeIcon }} />
         <CodeItem name="JavaScript" />
-        <CodeItem name="TypeScript" />
         <CodeItem name="React" />
         <CodeItem name="Node" />
+        <CodeItem name="C#" />
       </div>
     </div>
   );
