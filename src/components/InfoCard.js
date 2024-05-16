@@ -18,7 +18,7 @@ const InfoCard = () => {
       </div>
       <div className="mr-1 my-3 md:my-5 text-center">
         <div className="w-fit m-auto" dangerouslySetInnerHTML={{ __html: mapIcon }} />
-        Vancouver, WA
+        Beaverton, OR
         <div className="text-xs md:text-sm">(PDX metro area)</div>
       </div>
       <div className="mr-1 my-3 md:my-5 text-center">
@@ -26,7 +26,8 @@ const InfoCard = () => {
         <CodeItem name="JavaScript" />
         <CodeItem name="React" />
         <CodeItem name="Node" />
-        <CodeItem name="C#" />
+        <CodeItem name="SQL" />
+        {/* <CodeItem name="C#" /> */}
       </div>
     </div>
   );
